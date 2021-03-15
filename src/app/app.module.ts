@@ -8,6 +8,7 @@ import { FormulaireComponent } from './formulaire/formulaire.component';
 import { AddPersonneComponent } from './add-personne/add-personne.component';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { CourseComponent } from './course/course.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,10 @@ import { CourseComponent } from './course/course.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule 
+  
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
