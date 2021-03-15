@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <h4 class="card-header  text-center ">Add a new product</h4>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="">ID</label>
+                            <input type="text" name="id" [(ngModel)]="newPersonne.id" class="form-control ">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Nom</label>
+                            <input type="text" name="nom" [(ngModel)]="newPersonne.nom" class="form-control ">
+                        </div>
+                        <div class="form-group ">
+                            <label for=" ">Prenom</label>
+                            <input type="text " class="form-control" name="prenom" [(ngModel)]="newPersonne.prenom">
+                        </div>
+                        <div class="form-group ">
+
+                            <input type="submit " (click)="ajouterPersonne()" class="btn btn-primary mr-2" value="Add ">
+                            <input type="reset " class="btn btn-secondary" value="Cancel ">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

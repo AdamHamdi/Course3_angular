@@ -1,0 +1,5 @@
+<!-- <p (click)='onFavoriteClick()'>hello world </p> -->
+<p> Interpollation evalué à runtime {{ getTitre()}} : {{ nb_etuds}}</p>
+<input [(ngModel)]="titre" type="text">
+<app-course [contenu]='UE[0]' (newNb)="onNewNb($event)"></app-course>
+<app-course [contenu]='UE[1]' (newNb)="onNewNb($event)"></app-course>
