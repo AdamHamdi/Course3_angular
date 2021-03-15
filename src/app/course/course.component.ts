@@ -14,7 +14,7 @@ export class CourseComponent implements OnInit {
   lastNb :number;
   dataArray
   constructor( private http: HttpClient) { 
-    this.http.get('https://jsonplaceholder.typicode.com/posts').subscribe(data=>{
+    this.http.get('https://jsonplaceholder.typicode.com/posts/1/comments').subscribe(data=>{
      this.dataArray=data
     })
   }

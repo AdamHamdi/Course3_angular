@@ -1,5 +1,9 @@
 <!-- <p (click)='onFavoriteClick()'>hello world </p> -->
 <p> Interpollation evalué à runtime {{ getTitre()}} : {{ nb_etuds}}</p>
+<p *ngIf="nb_etuds < 10"> peu d'etudiants</p>
+<p *ngIf="nb_etuds >= 10"> beaucoup d'etudiants</p>
+<p></p>
 <input [(ngModel)]="titre" type="text">
-<app-course [contenu]='UE[0]' (newNb)="onNewNb($event)"></app-course>
-<app-course [contenu]='UE[1]' (newNb)="onNewNb($event)"></app-course>
+<!-- <app-course [contenu]='UE[0]' (newNb)="onNewNb($event)"></app-course>
+<app-course [contenu]='UE[1]' (newNb)="onNewNb($event)"></app-course> -->
+<app-course *ngFor="let cours of UE" [contenu]="cours" (newNb)="onNewNb($event)"></app-course>

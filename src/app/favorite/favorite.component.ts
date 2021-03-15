@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Course } from './../interfaces/course';
+import { CourseserviceService } from './../courseservice.service';
 
 @Component({
   selector: 'app-favorite',
@@ -9,18 +10,20 @@ import { Course } from './../interfaces/course';
 export class FavoriteComponent implements OnInit {
   ma_valeur: string ="valeur initiale"
   titre="liste des cours"
-  UE: Course[]=[
-     {titre :"c1", nb_etud:2},
-     {titre :"c2", nb_etud:5},
-  ]
+  UE: Course[];
   nb_etuds :number
 
   @Input() isFavorite: boolean = false;
   @Output() myEvent = new EventEmitter() ;
 
-  constructor() { }
+  constructor( private service:CourseserviceService) {
+   
+   
+   }
 
   ngOnInit(): void {
+    this.UE= this.service.getCourses();
+   
     this.getNbEtuds()
   }
  onFavoriteClick(){
