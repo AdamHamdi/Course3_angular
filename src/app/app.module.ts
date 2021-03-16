@@ -9,6 +9,8 @@ import { AddPersonneComponent } from './add-personne/add-personne.component';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { CourseComponent } from './course/course.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PereComponent } from './pere/pere.component';
+import { FilsComponent } from './fils/fils.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { HttpClientModule } from '@angular/common/http';
     FormulaireComponent,
     AddPersonneComponent,
     FavoriteComponent,
-    CourseComponent
+    CourseComponent,
+    PereComponent,
+    FilsComponent
   ],
   imports: [
     BrowserModule,
